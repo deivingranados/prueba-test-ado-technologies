@@ -1,46 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Prueba de Frontend - ADO Technologies
+Este proyecto es una prueba técnica en la que se utiliza React con TypeScript implementando la arquitectura Clean Architecture. A continuación, se describe el enfoque tomado, las decisiones técnicas, y las limitaciones encontradas debido a los tiempos de entrega.
 
-## Available Scripts
+# Tecnologías Utilizadas
+React: Se utilizó como la biblioteca principal para construir la interfaz de usuario.
+TypeScript: Se utilizó para garantizar una tipificación estricta y mayor robustez en el desarrollo.
+Clean Architecture: La organización del proyecto se basa en la separación de responsabilidades, facilitando la escalabilidad y el mantenimiento del código.
+Estructura del Proyecto
+El proyecto sigue la Clean Architecture, con una separación clara de las capas:
 
-In the project directory, you can run:
+## src/application/: Contiene los casos de uso y la lógica de negocio.
+useCases/: Casos de uso específicos de la aplicación.
+services/: Llamadas a los servicios y APIs.
+src/domain/: Define las entidades e interfaces.
+entities/: Modelos y clases del dominio.
+interfaces/: Interfaces que definen las reglas del negocio.
+repositories/: Contratos de los repositorios para acceder a datos.
+src/infrastructure/: La infraestructura de la aplicación, como la conexión a APIs y el manejo de datos.
+api/: Interacciones con APIs externas.
+src/presentation/: Contiene los componentes que interactúan con el usuario.
+components/: Componentes reutilizables dentro de la aplicación.
+pages/: Páginas principales de la aplicación.
+routes/: Configuración de rutas.
+Estilos y Responsividad
+Para los estilos CSS, se implementó un archivo global.css que maneja los estilos de toda la aplicación. Aunque no es la mejor práctica, fue una decisión tomada debido a los tiempos limitados de la prueba. Lo ideal sería crear archivos CSS modulares para cada componente, mejorando así el aislamiento de los estilos y la mantenibilidad del código.
 
-### `npm start`
+# Responsividad
+Para lograr una experiencia responsive, se utilizó CSS Grid, permitiendo que el diseño se adapte de forma dinámica a diferentes tamaños de pantalla. Este enfoque proporciona una estructura flexible que responde bien en dispositivos móviles y pantallas de escritorio.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Limitaciones
+CSS Global: Como se mencionó anteriormente, por los tiempos de entrega se decidió centralizar los estilos en un solo archivo global. En un proyecto más grande o con más tiempo, se habrían implementado estilos modulares específicos para cada componente.
+Falta de pruebas unitarias: No se implementaron pruebas debido al tiempo limitado.
+# Instrucciones de Instalación
+Clonar el repositorio:
+bash
+Copiar código
+git clone https://github.com/deivingranados/prueba-test-ado-technologies.git
+Instalar dependencias:
+bash
+Copiar código
+npm install
+Iniciar la aplicación:
+bash
+Copiar código
+npm start
+Conclusión
+Este proyecto es una prueba técnica que refleja el uso de buenas prácticas en la arquitectura de software, aunque algunas decisiones (como el uso de un CSS global) fueron tomadas para ajustarse al tiempo de entrega. Con más tiempo, se habría refinado el proyecto con mejores prácticas en la gestión de estilos y pruebas unitarias.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
