@@ -10,19 +10,17 @@ Estructura del Proyecto
 El proyecto sigue la Clean Architecture, con una separación clara de las capas:
 
 ## src/application/: Contiene los casos de uso y la lógica de negocio.
-useCases/: Casos de uso específicos de la aplicación.
-services/: Llamadas a los servicios y APIs.
-src/domain/: Define las entidades e interfaces.
-entities/: Modelos y clases del dominio.
-interfaces/: Interfaces que definen las reglas del negocio.
-repositories/: Contratos de los repositorios para acceder a datos.
-src/infrastructure/: La infraestructura de la aplicación, como la conexión a APIs y el manejo de datos.
-api/: Interacciones con APIs externas.
-src/presentation/: Contiene los componentes que interactúan con el usuario.
-components/: Componentes reutilizables dentro de la aplicación.
-pages/: Páginas principales de la aplicación.
-routes/: Configuración de rutas.
-Estilos y Responsividad
+# useCases/: Casos de uso específicos de la aplicación.
+# services/: Llamadas a los servicios y APIs.
+# src/domain/: Define las entidades e interfaces.
+# entities/: Modelos y clases del dominio.
+# interfaces/: Interfaces que definen las reglas del negocio.
+# src/infrastructure/: La infraestructura de la aplicación, como la conexión a APIs y el manejo de datos.
+# api/: Interacciones con APIs externas.
+# src/presentation/: Contiene los componentes que interactúan con el usuario.
+#components/: Componentes reutilizables dentro de la aplicación.
+#pages/: Páginas principales de la aplicación.
+# Estilos y Responsividad
 Para los estilos CSS, se implementó un archivo global.css que maneja los estilos de toda la aplicación. Aunque no es la mejor práctica, fue una decisión tomada debido a los tiempos limitados de la prueba. Lo ideal sería crear archivos CSS modulares para cada componente, mejorando así el aislamiento de los estilos y la mantenibilidad del código.
 
 # Responsividad
