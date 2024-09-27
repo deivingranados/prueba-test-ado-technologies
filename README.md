@@ -9,11 +9,26 @@ Clean Architecture: La organización del proyecto se basa en la separación de r
 Estructura del Proyecto
 El proyecto sigue la Clean Architecture, con una separación clara de las capas:
 
---src/application/: Contiene los casos de uso y la lógica de negocio.
--- useCases/: Casos de uso específicos de la aplicación.
+src/
+├── application/
+|  └── services/
+├── domain/
+│ ├── interfaces/
+├── infrastructure/
+│   ├── api/
+│   ├── database/
+│   └── redux/                
+│       ├── store.ts         
+|       └── reducers.ts       
+├── presentation/
+│   ├── components/
+│   ├── pages/
+│  
+└── index.tsx
+
+--src/application/:
 --services/: Llamadas a los servicios y APIs.
 --src/domain/: Define las entidades e interfaces. 
--- entities/: Modelos y clases del dominio.
 --interfaces/: Interfaces que definen las reglas del negocio.
 --src/infrastructure/: La infraestructura de la aplicación, como la conexión a APIs y el manejo de datos.
 --api/: Interacciones con APIs externas.
