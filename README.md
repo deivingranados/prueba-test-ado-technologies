@@ -9,7 +9,7 @@ Clean Architecture: La organización del proyecto se basa en la separación de r
 Estructura del Proyecto
 El proyecto sigue la Clean Architecture, con una separación clara de las capas:
 
-## src/application/: Contiene los casos de uso y la lógica de negocio.
+--src/application/: Contiene los casos de uso y la lógica de negocio.
 # useCases/: Casos de uso específicos de la aplicación.
 # services/: Llamadas a los servicios y APIs.
 # src/domain/: Define las entidades e interfaces.
